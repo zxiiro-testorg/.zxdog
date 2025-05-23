@@ -1,4 +1,4 @@
-local orgs = import 'otterdog-defaults/otterdog-defaults.libsonnet';
+local orgs = import 'vendor/.otterdog/otterdog-defaults/otterdog-defaults.libsonnet';
 
 local customRuleset(name) =
   orgs.newRepoRuleset(name) {
