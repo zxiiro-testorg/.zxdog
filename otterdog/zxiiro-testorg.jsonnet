@@ -43,6 +43,15 @@ orgs.newOrg('zxtest.atest', 'zxiiro-testorg') {
     },
     orgs.newRepo('test-repo') {
       description: "Yeah",
+      environments: [
+        orgs.newEnvironment('linux') {
+          deployment_branch_policy: "protected",
+          reviewers+: [
+            "@zxiiro",
+          ],
+          wait_timer: 30,
+        },
+      ]
     },
   ],
 }
