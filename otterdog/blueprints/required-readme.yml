@@ -5,6 +5,8 @@ description: |-
   README.md file in all repos.
 type: required_file
 config:
+  repo_selector:
+    name_pattern: .zxdog
   files:
     - path: README.md
       strict: true
