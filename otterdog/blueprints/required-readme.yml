@@ -7,6 +7,7 @@ type: required_file
 config:
   files:
     - path: README.md
+      strict: true
       content: |
         # REQUIRED
                 
