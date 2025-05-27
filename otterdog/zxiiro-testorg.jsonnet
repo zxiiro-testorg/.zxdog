@@ -37,14 +37,15 @@ orgs.newOrg('zxtest.atest', 'zxiiro-testorg') {
   _repositories+:: [
     orgs.newRepo('.otterdog') {
       has_discussions: true,
+      private: true,
     },
     orgs.newRepo('.zxdog') {
       description: "Project Config",
-      private: true,
+      private: false,
     },
     orgs.newRepo('test-repo') {
       description: "Yeah",
-      private: true,
+      private: false,
       environments: [
         orgs.newEnvironment('linux') {
           deployment_branch_policy: "protected",
