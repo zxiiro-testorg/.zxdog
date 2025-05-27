@@ -56,4 +56,9 @@ orgs.newOrg('zxtest.atest', 'zxiiro-testorg') {
       ]
     },
   ],
+} + {
+  # snippet added due to 'https://github.com/zxiiro-testorg/.otterdog/blob/main/blueprints/add-dot-github-repo.yml'
+  _repositories+:: [
+    orgs.newRepo('.github')
+  ],
 }
