@@ -1,0 +1,25 @@
+id: require-dependabot-auto-merge
+name: Require dependabot-auto-merge.yml
+type: required_file
+config:
+  repo_selector:
+    name_pattern:
+      - temurin-build
+      - containers
+  files:
+    - path: .github/workflows/dependabot-auto-merge.yml
+      content: |
+        # This is a templated file from {{blueprint_url}} for {{repo_name}}
+        name: Dependabot auto-merge
+        on: pull_request_target
+
+        permissions: read-all
+
+        jobs:
+          dependabot:
+            permissions:
+              contents: write
+              pull-requests: write
+            uses: {{github_id}}/.github/.github/workflows/dependabot-auto-merge.yml@main
+      # ensure that changes to the template are propagated
+      strict: true
