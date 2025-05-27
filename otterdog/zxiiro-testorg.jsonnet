@@ -28,7 +28,7 @@ local protectTags() = orgs.newRepoRuleset('tags-protection') {
 
 orgs.newOrg('zxtest.atest', 'zxiiro-testorg') {
   settings+: {
-    description: "A test org 2",
+    description: "A test org 2 a",
     has_discussions: false,
     name: "Just a test",
     web_commit_signoff_required: false,
