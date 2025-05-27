@@ -4,8 +4,8 @@ type: required_file
 config:
   repo_selector:
     name_pattern:
-      - temurin-build
-      - containers
+      - ".zxdog"
+      - "test-repo"
   files:
     - path: .github/workflows/dependabot-auto-merge.yml
       content: |
